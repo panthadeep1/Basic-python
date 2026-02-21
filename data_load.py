@@ -7,7 +7,7 @@ import math
 from array import *
 
 ##Read the #rows, #cols
-fp = open("input.txt", "rt");
+fp = open("matrix-data", "rt");
 dimension = fp.readline();
 #fp.close();
 

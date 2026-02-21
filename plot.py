@@ -6,9 +6,9 @@ import numpy as np
 import math as math
 from array import *
 import matplotlib.pyplot as plt
-import seaborn as sns
 
-
-sns.distplot([0,1,2,3,4,5]);
+arr1 = np.array([[1,2],[3,4]]);
+arr2 = np.array([[2,2],[4,4]]);
+plt.plot(arr1,arr2);
 plt.show();
 

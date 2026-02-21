@@ -9,7 +9,7 @@ from array import *
 ##Functions
 
 ##Read the #rows, #cols
-fp = open("input.txt", "rt");
+fp = open("10_5", "rt");
 dimension = fp.readline();
 #fp.close();
 
@@ -38,15 +38,16 @@ for i in range(0,nrow):
 
 ##Initialize graph-matrix
 graph_matrix = []; 
-for i in range(0,nrow):                                             
-      temp = [0]*nrow;                                       
-      graph_matrix.insert(i,temp);
+for i in range(0,nrow):
+    print(i);
+    temp = [0]*nrow;                                       
+    graph_matrix.insert(i,temp);
       
       
 ##Display initial graph-matrix
 print("The initial graph-matrix is:");
-for i in range(0,nrow):
-   print(graph_matrix[i]);  
+##for i in range(0,nrow):
+  ##  print(graph_matrix[i]);  
    
    
 
@@ -54,17 +55,19 @@ for i in range(0,nrow):
 p_x = [];
 p_y = [];      
 for i in range(0,nrow):
-   for j in range(0,nrow):
-      p_x = data_matrix[i];
-      p_y = data_matrix[j];
-      #print(p_x,p_y);
-      d_xy = math.dist(p_x,p_y);
-      graph_matrix[i][j] = d_xy;      
+    for j in range(0,nrow):
+        p_x = data_matrix[i]; ##assign the ith pt. vector
+        p_y = data_matrix[j]; ##assign the jth pt. vector 
+        print(f"({i},{j}):");
+        d_xy = math.dist(p_x,p_y);
+        graph_matrix[i][j] = d_xy;
+    
+       
       
       
 print("The graph-matrix is:");
-for i in range(0,nrow):
-   print("Point ", i, "]:", graph_matrix[i], end="\n");  
+##for i in range(0,nrow):
+  ## print("Point ", i, "]:", graph_matrix[i], end="\n");  
                                     
                                              
                                              

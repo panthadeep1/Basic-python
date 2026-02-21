@@ -32,37 +32,3 @@ for item in listArr:
 arr = np.array([1,2,"tiger",3]);
 for item in arr:
   print(item);
-  
-  
-## Determinant of matrix
-fp = open("matrix","rt");
-matrix = [];
-j = 0;
-while(True):
-     line = fp.readline();
-     if(line == ""):
-       break;
-     else:         
-       row = [int(i) for i in line.split()];
-       matrix.insert(j,row);
-       j += 1;
-fp.close();       
-       
-print("The matrix is:\n", matrix);
-det = np.linalg.det(matrix);
-print("The determinant is:", int(det));
-
-##Inverse of a matrix
-inv_mat = np.linalg.inv(matrix);
-print("The inverse of matrix is:", inv_mat);
-
-
-
-
-
-
-
-
-
-  
-  
